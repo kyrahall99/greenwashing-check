@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Check your product for greenwashing — Slides</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<style>
+  :root { --r-main-font: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          --r-heading-font: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          --r-main-font-size: 30px; --r-heading-color: #101828; --r-link-color: #067647; }
+  .reveal h1, .reveal h2 { text-transform: none; font-weight: 750; letter-spacing: -0.01em; }
+  .reveal h2 { font-size: 1.45em; margin-bottom: .45em; }
+  .reveal section { text-align: left; }
+  .reveal .accent { color: #067647; }
+  .reveal .muted { color: #475467; font-size: .72em; }
+  .reveal .small { font-size: .62em; color: #475467; }
+  .reveal ul { margin-left: 1em; }
+  .reveal li { margin: .25em 0; }
+  .reveal table { font-size: .6em; margin: 0; width: 100%; }
+  .reveal table th { background: #f6f8f6; }
+  .reveal table td, .reveal table th { padding: .3em .5em; border-bottom: 1px solid #e4e7ec; }
+  .reveal img.shot { border: 1px solid #e4e7ec; border-radius: 10px; box-shadow: 0 4px 16px rgba(16,24,40,.08); margin: 0; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: .6em; }
+  .kpi { background: #ecfdf3; border-radius: 14px; padding: 18px 20px; }
+  .kpi .v { font-size: 1.5em; font-weight: 800; color: #067647; line-height: 1.1; }
+  .kpi .l { font-size: .58em; color: #344054; margin-top: 6px; }
+  .band { background: #067647; color: #fff; padding: 4px 14px; border-radius: 8px; display: inline-block; font-size: .55em; font-weight: 700; }
+  .reveal blockquote { width: 100%; margin: .4em 0; font-size: .72em; background: #f9fafb; border-left: 6px solid #067647; box-shadow: none; padding: .6em 1em; }
+  .foot { position: absolute; bottom: -1.6em; left: 0; font-size: .42em; color: #98a2b3; }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- 1 Title -->
+<section>
+  <span class="band">MGT 409 Final Project</span>
+  <h1 style="font-size:2.1em;margin-top:.4em">🌿 Check your product for greenwashing</h1>
+  <p>Four AI agents read a product page, find every environmental claim, and test it against
+  U.S. and EU green-marketing rules, for <span class="accent"><b>under one cent per page</b></span>.</p>
+  <p class="muted">Kyra Hall · Yale SOM / Yale School of the Environment<br>
+  Repo (public): <a href="https://github.com/kyrahall99/greenwashing-check">github.com/kyrahall99/greenwashing-check</a></p>
+</section>
+
+<!-- 2 Problem -->
+<section>
+  <h2>The problem: greenwashing</h2>
+  <div class="grid2">
+    <div>
+      <ul>
+        <li>"Eco-friendly", "biodegradable", "carbon neutral": often <b>no proof</b> behind them</li>
+        <li><b>Shoppers</b> take claims at face value; checking takes minutes per product</li>
+        <li><b>Small sellers</b> don't know the rules; legal review ≈ <b>$349/hour</b></li>
+        <li>Rules are tightening: FTC Green Guides; <b>EU ban on generic claims from 27 Sept 2026</b></li>
+      </ul>
+    </div>
+    <div>
+      <p class="muted" style="margin-top:0"><b>Why me:</b> as a joint-degree student with the School of the Environment,
+      I wanted to show AI can <span class="accent"><b>help</b></span> the environment, not just consume energy.</p>
+      <p class="muted">Real penalties: Kohl's &amp; Walmart "bamboo" textiles ($5.5M, FTC 2022), Clorox "ocean plastic"
+      (A$8.25M, ACCC 2024), KLM offset claims (Dutch court, 2024).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 What's new -->
+<section>
+  <h2>What is new</h2>
+  <table>
+    <tr><th>Product</th><th>Method</th><th>Rules</th><th>Rewrites</th></tr>
+    <tr><td>EcoClaim</td><td>82-term banned-word list + AI rewrites</td><td>EU only</td><td>Yes</td></tr>
+    <tr><td>GreenClaims-Scanner</td><td>Deterministic phrase list</td><td>EU only</td><td>—</td></tr>
+    <tr><td>Senken, EmpCo Scanner</td><td>EU / German law checkers</td><td>EU / DE</td><td>—</td></tr>
+    <tr><td>Lawyer / Bird &amp; Bird</td><td>Human review</td><td>Any</td><td>Yes, $$$</td></tr>
+    <tr><td><b>This project</b></td><td><b>4 agents read claims in context</b></td><td><b>U.S. FTC + EU</b></td><td><b>Yes + proof list</b></td></tr>
+  </table>
+  <ul style="font-size:.78em">
+    <li>Catches deception with <b>no banned word</b>: "100% bamboo" rayon, self-made seals, "ocean plastic"</li>
+    <li>Clears <b>qualified</b> claims: 0 of 8 compliant test claims rated high risk</li>
+  </ul>
+</section>
+
+<!-- 4 Agent diagram -->
+<section>
+  <h2>The agent team</h2>
+  {{DIAGRAM}}
+  <p class="small">All agents: gpt-6-luna via Portkey. Shared ~1,800-token rules reference (FTC Green Guides + EU 2024/825) is cached across calls.
+  Code checks between agents: quotes must exist on the page, rule IDs must exist, budgets enforced.</p>
+</section>
+
+<!-- 5 Demo -->
+<section>
+  <h2>Demo: Dr. Bronner's soap, step by step</h2>
+  <div class="grid2">
+    <div>{{IMG:bronner_claims}}</div>
+    <div>
+      <ul style="font-size:.7em">
+        <li><b>Clean:</b> 88 hidden blocks (tracking, chat widgets) removed</li>
+        <li><b>Extractor:</b> 19 claims, exact quotes verified</li>
+        <li><b>Checker:</b> "Third-Party Certified" → high risk (who? for what?)</li>
+        <li><b>Skeptic:</b> raised "Spaceship Earth" slogan, lowered "Certified Fair Trade"</li>
+        <li><b>Rewriter:</b> "[Product] certified by [certifier] for [benefit]"</li>
+      </ul>
+      <p class="small">4 high · 15 need evidence · 0 OK · $0.0070 · ~90 s</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 Cost -->
+<section>
+  <h2>Cost</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="v">${{AVG_COST}}</div><div class="l">per real product page (measured, 5 runs)</div></div>
+    <div class="kpi"><div class="v">${{U10K}}/mo</div><div class="l">10,000 users × 20 pages</div></div>
+    <div class="kpi"><div class="v">{{LAWYER_X}}×</div><div class="l">cheaper than 1 lawyer hour ($349)</div></div>
+  </div>
+  <table style="margin-top:.8em">
+    <tr><th>Per real page (avg)</th><th>New input</th><th>Cached input</th><th>Output</th><th>Time</th></tr>
+    <tr><td>tokens</td><td>{{AVG_IN}}</td><td>{{AVG_CA}}</td><td>{{AVG_OUT}}</td><td>{{AVG_SEC}} s</td></tr>
+  </table>
+  <ul style="font-size:.66em">
+    <li><b>Caching:</b> shared rules prefix → 6,000–9,000 tokens per review at 1/10 price</li>
+    <li><b>Quick mode</b> (no Skeptic): 26% cheaper, 24% faster, slightly fewer high-risk catches (10.0 vs 10.7 of 14)</li>
+    <li>Output is 88% of cost → shorter outputs are the next saving</li>
+  </ul>
+</section>
+
+<!-- 7 Safety -->
+<section>
+  <h2>Safety: the input is adversarial</h2>
+  <div class="grid2">
+    <div>{{IMG:inject_on}}</div>
+    <div>
+      <ul style="font-size:.66em">
+        <li><b>Hidden text stripped</b> (display:none, white text, comments): 3 of 3 planted instructions removed</li>
+        <li><b>Visible "Note for AI reviewers"</b> sentences redacted; Skeptic reports the attempt</li>
+        <li>Page wrapped as <b>data, not instructions</b></li>
+        <li><b>Output checks:</b> fake quotes and rule IDs dropped</li>
+        <li><b>Spend caps:</b> 25,199-char paste refused at $0</li>
+      </ul>
+      <p class="small">5 runs each way: with defenses off, planted text showed up as "claims" in 2 of 5 reports; with defenses on, 0 of 5. The model also resisted on its own (noticed it 5 of 5 times).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 Impact -->
+<section>
+  <h2>Impact</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="v">54 s</div><div class="l">tool review vs. several minutes by hand (Madison, Credo mascara)</div></div>
+    <div class="kpi"><div class="v">14 / 14</div><div class="l">real enforcement-case claims flagged</div></div>
+    <div class="kpi"><div class="v">0 / 8</div><div class="l">qualified claims wrongly rated high risk</div></div>
+  </div>
+  <blockquote>"I wouldn't normally take the step to do the research before buying. I typically take eco-friendly
+  claims at face value." — Madison, test user</blockquote>
+  <p class="small">The tool caught packaging claims she missed. Real pages: Who Gives a Crap 4 high / 10 OK; Dr. Bronner's 4 high / 0 OK; Credo 7 high / 2 OK.</p>
+</section>
+
+<!-- 9 Next steps -->
+<section>
+  <h2>Limits and next steps</h2>
+  <div class="grid2">
+    <div>
+      <p class="accent"><b>Limits</b></p>
+      <ul style="font-size:.68em">
+        <li>Can't verify facts off the page: real certifications still "need evidence"</li>
+        <li>Ratings vary: 17 of 22 test cases identical across 3 runs</li>
+        <li>Scraping noise (store tags read as claims)</li>
+        <li>One outside user so far; not legal advice</li>
+      </ul>
+    </div>
+    <div>
+      <p class="accent"><b>Next</b></p>
+      <ul style="font-size:.68em">
+        <li>Certification lookup for recognized seals</li>
+        <li>Phone app / browser extension for shoppers</li>
+        <li>Double-check ratings for stability</li>
+        <li>Shorter outputs to cut cost</li>
+      </ul>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:1em">Repo (public): <a href="https://github.com/kyrahall99/greenwashing-check">github.com/kyrahall99/greenwashing-check</a></p>
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>Reveal.initialize({ hash: true, slideNumber: 'c/t', width: 1280, height: 720, margin: 0.06 });</script>
+</body>
+</html>
