@@ -1,0 +1,95 @@
+{
+ "runs": [
+  {
+   "sample": "candle",
+   "calls": 4,
+   "input": 3626,
+   "cached_input": 7045,
+   "output": 6133,
+   "cost_usd": 0.013349,
+   "seconds": 53.67,
+   "counts": {
+    "high": 3,
+    "medium": 4,
+    "low": 2
+   }
+  },
+  {
+   "sample": "candle",
+   "calls": 4,
+   "input": 4537,
+   "cached_input": 7045,
+   "output": 8568,
+   "cost_usd": 0.018446,
+   "seconds": 71.52,
+   "counts": {
+    "high": 5,
+    "medium": 5,
+    "low": 1
+   }
+  },
+  {
+   "sample": "candle",
+   "calls": 4,
+   "input": 3885,
+   "cached_input": 7176,
+   "output": 6212,
+   "cost_usd": 0.013575,
+   "seconds": 54.83,
+   "counts": {
+    "high": 4,
+    "medium": 5,
+    "low": 1
+   }
+  },
+  {
+   "sample": "bamboo",
+   "calls": 4,
+   "input": 2858,
+   "cached_input": 7111,
+   "output": 5713,
+   "cost_usd": 0.012318,
+   "seconds": 48.83,
+   "counts": {
+    "high": 4,
+    "medium": 3,
+    "low": 0
+   }
+  },
+  {
+   "sample": "bamboo",
+   "calls": 4,
+   "input": 2292,
+   "cached_input": 7045,
+   "output": 5027,
+   "cost_usd": 0.010803,
+   "seconds": 41.92,
+   "counts": {
+    "high": 5,
+    "medium": 1,
+    "low": 0
+   }
+  },
+  {
+   "sample": "bamboo",
+   "calls": 4,
+   "input": 2833,
+   "cached_input": 7111,
+   "output": 5213,
+   "cost_usd": 0.011312,
+   "seconds": 44.75,
+   "counts": {
+    "high": 3,
+    "medium": 4,
+    "low": 0
+   }
+  }
+ ],
+ "avg": {
+  "input": 3338.5,
+  "cached_input": 7088.83333,
+  "output": 6144.33333,
+  "cost_usd": 0.0133,
+  "seconds": 52.58667
+ }
+}

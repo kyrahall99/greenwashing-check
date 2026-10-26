@@ -90,6 +90,9 @@ You need **Python 3.10 or newer** (tested on 3.14).
 - **Product page URL:** the app downloads the page and reviews its visible text.
 - **Webpage HTML file:** upload a saved page (File → Save Page As in your browser).
 - **Where do you sell?** EU rules are stricter, so pick the right market.
+- **Quick mode** (sidebar) skips the Skeptic: in our tests 26% cheaper and 24%
+  faster, but it rated slightly fewer deceptive claims as high risk.
+- **Download report** saves the review as a Markdown file you can share.
 - **Safety defenses** (sidebar) are on by default. Turning them off shows what
   happens without them; use that only for testing.
 - The **Tokens and cost** tab shows tokens and cost for each agent. Every review
@@ -105,7 +108,9 @@ from the Green Guides' own examples. Run all of them in parallel:
 .venv/bin/python -m eval.run_eval --workers 5
 ```
 
-Results are saved to `eval/results.json`. A full run costs about $0.07.
+Add `--repeats 3` to measure run-to-run stability and `--no-skeptic` to measure
+what the Skeptic adds. Results are saved to `eval/results_*.json`. One pass costs
+about $0.07. A summary of all measured results is in `docs/research.md`.
 
 ## Repo layout
 

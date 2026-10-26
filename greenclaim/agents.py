@@ -154,6 +154,7 @@ def run_review(
     html: str = "",
     market: str = "United States",
     defenses: bool = True,
+    skeptic: bool = True,
     llm: LLM | None = None,
     on_step=None,
 ) -> dict:
@@ -164,14 +165,14 @@ def run_review(
     prep = prepare_input(text=text, url=url, html=html, defenses=defenses)
     state = {"claims": [], "ext": {}, "flags": []}
     try:
-        return _pipeline(prep, market, defenses, llm, step, started, state)
+        return _pipeline(prep, market, defenses, llm, step, started, state, skeptic)
     except (ProviderBlocked, BudgetExceeded) as e:
         state["flags"].append(str(e))
         return _finish(prep, state["ext"], state["claims"], state["flags"], "", "", llm, started,
                        market, defenses, stopped=str(e))
 
 
-def _pipeline(prep, market, defenses, llm, step, started, state) -> dict:
+def _pipeline(prep, market, defenses, llm, step, started, state, skeptic=True) -> dict:
     doc = _doc(prep["clean"], spotlight=defenses)
     flags: list[str] = state["flags"]
 
@@ -210,12 +211,14 @@ def _pipeline(prep, market, defenses, llm, step, started, state) -> dict:
         c["reason"] = a.get("reason", "")
         c["evidence_needed"] = a.get("evidence_needed", "")
 
-    # 3. Skeptic
-    step("Skeptic: challenging the ratings")
-    sk = llm.json_call(
-        "skeptic", SKEPTIC,
-        f"Market: {market}\n\nRatings to review:\n{json.dumps(claims, indent=1)}\n\n{doc}",
-    )
+    # 3. Skeptic (can be switched off to measure what it adds)
+    sk = {}
+    if skeptic:
+        step("Skeptic: challenging the ratings")
+        sk = llm.json_call(
+            "skeptic", SKEPTIC,
+            f"Market: {market}\n\nRatings to review:\n{json.dumps(claims, indent=1)}\n\n{doc}",
+        )
     reviews = {r.get("id"): r for r in sk.get("reviews", []) if isinstance(r, dict)}
     for c in claims:
         r = reviews.get(c["id"], {})

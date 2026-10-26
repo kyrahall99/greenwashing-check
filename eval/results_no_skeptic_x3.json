@@ -1,0 +1,2376 @@
+{
+  "skeptic": false,
+  "repeats": 3,
+  "mean": {
+    "deceptive_caught_as_high": 10.0,
+    "deceptive_caught_high_or_medium": 14.0,
+    "deceptive_total": 14.0,
+    "compliant_wrongly_high": 0.0,
+    "compliant_rated_low": 3.3333,
+    "compliant_total": 8.0,
+    "accuracy_high_vs_not": 0.818,
+    "avg_calls": 2.8467,
+    "avg_input_tokens": 422.3333,
+    "avg_cached_input_tokens": 5025.0,
+    "avg_output_tokens": 1148.6667,
+    "avg_cost_usd": 0.0025,
+    "avg_seconds_per_review": 13.5333,
+    "total_cost_usd": 0.0556
+  },
+  "stability": {
+    "cases_same_top_risk_every_run": "21/22",
+    "cases_same_high_flag_every_run": "22/22",
+    "unstable_cases": [
+      "C08: medium/low/medium"
+    ]
+  },
+  "per_run": [
+    {
+      "cases": 22,
+      "deceptive_caught_as_high": 10,
+      "deceptive_caught_high_or_medium": 14,
+      "deceptive_total": 14,
+      "compliant_wrongly_high": 0,
+      "compliant_rated_low": 3,
+      "compliant_total": 8,
+      "accuracy_high_vs_not": 0.818,
+      "avg_calls": 2.86,
+      "avg_input_tokens": 610,
+      "avg_cached_input_tokens": 4870,
+      "avg_output_tokens": 1150,
+      "avg_cost_usd": 0.00257,
+      "avg_seconds_per_review": 13.5,
+      "total_cost_usd": 0.0566
+    },
+    {
+      "cases": 22,
+      "deceptive_caught_as_high": 10,
+      "deceptive_caught_high_or_medium": 14,
+      "deceptive_total": 14,
+      "compliant_wrongly_high": 0,
+      "compliant_rated_low": 4,
+      "compliant_total": 8,
+      "accuracy_high_vs_not": 0.818,
+      "avg_calls": 2.82,
+      "avg_input_tokens": 347,
+      "avg_cached_input_tokens": 5038,
+      "avg_output_tokens": 1101,
+      "avg_cost_usd": 0.00242,
+      "avg_seconds_per_review": 12.8,
+      "total_cost_usd": 0.0531
+    },
+    {
+      "cases": 22,
+      "deceptive_caught_as_high": 10,
+      "deceptive_caught_high_or_medium": 14,
+      "deceptive_total": 14,
+      "compliant_wrongly_high": 0,
+      "compliant_rated_low": 3,
+      "compliant_total": 8,
+      "accuracy_high_vs_not": 0.818,
+      "avg_calls": 2.86,
+      "avg_input_tokens": 310,
+      "avg_cached_input_tokens": 5167,
+      "avg_output_tokens": 1195,
+      "avg_cost_usd": 0.0026,
+      "avg_seconds_per_review": 14.3,
+      "total_cost_usd": 0.0571
+    }
+  ],
+  "runs": [
+    [
+      {
+        "id": "D01",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 533,
+          "cached_input": 5289,
+          "output": 2071,
+          "cost_usd": 0.004407,
+          "seconds": 19.67,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 19.71,
+        "claims": [
+          {
+            "quote": "Made from 100% bamboo",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX"
+            ]
+          },
+          {
+            "quote": "an eco-friendly, renewable fiber",
+            "risk": "high",
+            "rules": [
+              "GG-260.4",
+              "GG-260.16",
+              "FTC-TEX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D02",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 501,
+          "cached_input": 5255,
+          "output": 1666,
+          "cost_usd": 0.003589,
+          "seconds": 17.57,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 17.61,
+        "claims": [
+          {
+            "quote": "made from bamboo grown without pesticides",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX"
+            ]
+          },
+          {
+            "quote": "is naturally antibacterial",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D03",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 2264,
+          "cached_input": 3560,
+          "output": 1255,
+          "cost_usd": 0.003165,
+          "seconds": 13.72,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 13.76,
+        "claims": [
+          {
+            "quote": "Our plastic bags are 100% biodegradable.",
+            "risk": "high",
+            "rules": [
+              "GG-260.8"
+            ]
+          },
+          {
+            "quote": "Just toss them in the trash and they break down.",
+            "risk": "high",
+            "rules": [
+              "GG-260.8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D04",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 480,
+          "cached_input": 5281,
+          "output": 1322,
+          "cost_usd": 0.002896,
+          "seconds": 16.44,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 16.48,
+        "claims": [
+          {
+            "quote": "better for the environment",
+            "risk": "high",
+            "rules": [
+              "GG-260.3d",
+              "GG-260.4",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Disposable paper plates: biodegradable",
+            "risk": "medium",
+            "rules": [
+              "GG-260.8",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D05",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 2300,
+          "cached_input": 3468,
+          "output": 1284,
+          "cost_usd": 0.00323,
+          "seconds": 14.37,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.4,
+        "claims": [
+          {
+            "quote": "Moist bath wipes: biodegradable",
+            "risk": "high",
+            "rules": [
+              "GG-260.8"
+            ]
+          },
+          {
+            "quote": "biodegradable and septic safe",
+            "risk": "high",
+            "rules": [
+              "GG-260.8",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D06",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 541,
+          "cached_input": 5255,
+          "output": 1046,
+          "cost_usd": 0.002359,
+          "seconds": 13.68,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 13.73,
+        "claims": [
+          {
+            "quote": "then recycle it!",
+            "risk": "medium",
+            "rules": [
+              "GG-260.12",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Our pods are recyclable.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.12",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D07",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 459,
+          "cached_input": 5283,
+          "output": 1090,
+          "cost_usd": 0.002427,
+          "seconds": 12.54,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.54,
+        "claims": [
+          {
+            "quote": "Zero VOC interior paint",
+            "risk": "medium",
+            "rules": [
+              "GG-260.9",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Safe for your family and the planet",
+            "risk": "medium",
+            "rules": [
+              "GG-260.10",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D08",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 482,
+          "cached_input": 5255,
+          "output": 1263,
+          "cost_usd": 0.002778,
+          "seconds": 14.85,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.86,
+        "claims": [
+          {
+            "quote": "mark of environmental responsibility",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          },
+          {
+            "quote": "Green Promise seal",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D09",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 678,
+          "cached_input": 5255,
+          "output": 1817,
+          "cost_usd": 0.003935,
+          "seconds": 19.43,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 19.44,
+        "claims": [
+          {
+            "quote": "Green Safety Shield seal",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6"
+            ]
+          },
+          {
+            "quote": "are certified organic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.2",
+              "GG-260.6"
+            ]
+          },
+          {
+            "quote": "organic and non-toxic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.2",
+              "GG-260.10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D10",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 531,
+          "cached_input": 5255,
+          "output": 1505,
+          "cost_usd": 0.003274,
+          "seconds": 17.13,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 17.13,
+        "claims": [
+          {
+            "quote": "Fly CO2ZERO: offset the emissions of your flight",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET",
+              "GG-260.5"
+            ]
+          },
+          {
+            "quote": "travel carbon neutral",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET",
+              "GG-260.5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D11",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 342,
+          "cached_input": 5255,
+          "output": 961,
+          "cost_usd": 0.002139,
+          "seconds": 12.15,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.14,
+        "claims": [
+          {
+            "quote": "This shampoo is climate neutral: we compensate all of its CO2 emissions through certified forest projects.",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D12",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 328,
+          "cached_input": 5255,
+          "output": 859,
+          "cost_usd": 0.001931,
+          "seconds": 12.63,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.63,
+        "claims": [
+          {
+            "quote": "made with 50% ocean plastic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D13",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 534,
+          "cached_input": 5255,
+          "output": 1450,
+          "cost_usd": 0.003165,
+          "seconds": 16.56,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 16.56,
+        "claims": [
+          {
+            "quote": "Our Conscious collection: sustainable fashion",
+            "risk": "high",
+            "rules": [
+              "EU-GENERIC",
+              "GG-260.4"
+            ]
+          },
+          {
+            "quote": "better for the planet",
+            "risk": "high",
+            "rules": [
+              "EU-GENERIC",
+              "GG-260.3d",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D14",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 463,
+          "cached_input": 5255,
+          "output": 1090,
+          "cost_usd": 0.002427,
+          "seconds": 12.43,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.43,
+        "claims": [
+          {
+            "quote": "Eco-friendly dish soap",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          },
+          {
+            "quote": "Earth-safe and green",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C01",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 313,
+          "cached_input": 5255,
+          "output": 860,
+          "cost_usd": 0.00193,
+          "seconds": 10.92,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 10.93,
+        "claims": [
+          {
+            "quote": "70% recycled paper fiber by weight",
+            "risk": "medium",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C02",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 150,
+          "cached_input": 3560,
+          "output": 381,
+          "cost_usd": 0.000888,
+          "seconds": 8.22,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 8.23,
+        "claims": [
+          {
+            "quote": "recyclable in the few communities that collect #5 plastics.",
+            "risk": "low",
+            "rules": [
+              "GG-260.12",
+              "GG-260.3a"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C03",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 778,
+          "cached_input": 5255,
+          "output": 1434,
+          "cost_usd": 0.003194,
+          "seconds": 14.87,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.87,
+        "claims": [
+          {
+            "quote": "This bag is compostable in industrial composting facilities, which may not exist in your area.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.7",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Not suitable for home composting.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.7",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Certified to ASTM D6400 by BPI.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C04",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 338,
+          "cached_input": 5255,
+          "output": 663,
+          "cost_usd": 0.001542,
+          "seconds": 9.12,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 9.12,
+        "claims": [
+          {
+            "quote": "uses 20% less plastic than our previous 32 oz bottle",
+            "risk": "medium",
+            "rules": [
+              "GG-260.3d",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C05",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 548,
+          "cached_input": 5255,
+          "output": 1028,
+          "cost_usd": 0.002324,
+          "seconds": 12.78,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.78,
+        "claims": [
+          {
+            "quote": "Made with 100% organic cotton",
+            "risk": "medium",
+            "rules": [
+              "GG-260.16"
+            ]
+          },
+          {
+            "quote": "certified by the Global Organic Textile Standard (GOTS)",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C06",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 142,
+          "cached_input": 3560,
+          "output": 366,
+          "cost_usd": 0.000857,
+          "seconds": 5.93,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 5.94,
+        "claims": [
+          {
+            "quote": "Our factory runs on 60% solar power generated on site; the rest comes from the regional grid.",
+            "risk": "low",
+            "rules": [
+              "GG-260.15",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C07",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 140,
+          "cached_input": 3560,
+          "output": 390,
+          "cost_usd": 0.000904,
+          "seconds": 5.28,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 5.28,
+        "claims": [
+          {
+            "quote": "return the empty glass bottle to any of our stores and we refill it for free.",
+            "risk": "low",
+            "rules": [
+              "GG-260.14"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C08",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 564,
+          "cached_input": 5255,
+          "output": 1494,
+          "cost_usd": 0.00326,
+          "seconds": 16.4,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 16.4,
+        "claims": [
+          {
+            "quote": "cardboard box contains 85% recycled fibre",
+            "risk": "medium",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "certified by FSC Recycled (licence FSC-C000000)",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "EU-LABEL"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "D01",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 681,
+          "cached_input": 5289,
+          "output": 1606,
+          "cost_usd": 0.003514,
+          "seconds": 18.31,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 18.32,
+        "claims": [
+          {
+            "quote": "eco-friendly",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          },
+          {
+            "quote": "Made from 100% bamboo",
+            "risk": "medium",
+            "rules": [
+              "FTC-TEX"
+            ]
+          },
+          {
+            "quote": "renewable fiber",
+            "risk": "medium",
+            "rules": [
+              "GG-260.16",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D02",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 643,
+          "cached_input": 5285,
+          "output": 1880,
+          "cost_usd": 0.004053,
+          "seconds": 19.69,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 19.7,
+        "claims": [
+          {
+            "quote": "bamboo baby blanket",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX"
+            ]
+          },
+          {
+            "quote": "naturally antibacterial",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX"
+            ]
+          },
+          {
+            "quote": "made from bamboo grown without pesticides",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D03",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 341,
+          "cached_input": 5420,
+          "output": 1562,
+          "cost_usd": 0.003345,
+          "seconds": 18.38,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 18.39,
+        "claims": [
+          {
+            "quote": "Our plastic bags are 100% biodegradable.",
+            "risk": "high",
+            "rules": [
+              "GG-260.8"
+            ]
+          },
+          {
+            "quote": "Just toss them in the trash and they break down.",
+            "risk": "high",
+            "rules": [
+              "GG-260.8"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D04",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 344,
+          "cached_input": 5393,
+          "output": 1229,
+          "cost_usd": 0.002679,
+          "seconds": 13.93,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 13.95,
+        "claims": [
+          {
+            "quote": "Disposable paper plates: biodegradable",
+            "risk": "high",
+            "rules": [
+              "GG-260.8"
+            ]
+          },
+          {
+            "quote": "better for the environment",
+            "risk": "high",
+            "rules": [
+              "GG-260.4",
+              "GG-260.3d"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D05",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 382,
+          "cached_input": 5411,
+          "output": 1465,
+          "cost_usd": 0.003161,
+          "seconds": 14.88,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.9,
+        "claims": [
+          {
+            "quote": "Moist bath wipes: biodegradable",
+            "risk": "high",
+            "rules": [
+              "GG-260.8"
+            ]
+          },
+          {
+            "quote": "biodegradable and septic safe",
+            "risk": "high",
+            "rules": [
+              "GG-260.8",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D06",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 389,
+          "cached_input": 5411,
+          "output": 1088,
+          "cost_usd": 0.002409,
+          "seconds": 12.34,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.35,
+        "claims": [
+          {
+            "quote": "then recycle it!",
+            "risk": "medium",
+            "rules": [
+              "GG-260.12",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Our pods are recyclable.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.12",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D07",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 465,
+          "cached_input": 5283,
+          "output": 1213,
+          "cost_usd": 0.002674,
+          "seconds": 14.0,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.0,
+        "claims": [
+          {
+            "quote": "Zero VOC interior paint",
+            "risk": "medium",
+            "rules": [
+              "GG-260.9",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Safe for your family and the planet.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.10",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D08",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 346,
+          "cached_input": 5286,
+          "output": 969,
+          "cost_usd": 0.002157,
+          "seconds": 12.19,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.19,
+        "claims": [
+          {
+            "quote": "Green Promise seal on our paints, our mark of environmental responsibility",
+            "risk": "high",
+            "rules": [
+              "GG-260.4",
+              "GG-260.6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D09",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 622,
+          "cached_input": 5287,
+          "output": 1524,
+          "cost_usd": 0.003336,
+          "seconds": 16.65,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 16.66,
+        "claims": [
+          {
+            "quote": "carry the Green Safety Shield seal",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6"
+            ]
+          },
+          {
+            "quote": "are certified organic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.2",
+              "GG-260.6"
+            ]
+          },
+          {
+            "quote": "organic and non-toxic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.10"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D10",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 689,
+          "cached_input": 5286,
+          "output": 1776,
+          "cost_usd": 0.003856,
+          "seconds": 17.82,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 17.82,
+        "claims": [
+          {
+            "quote": "Fly CO2ZERO: offset the emissions",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET",
+              "GG-260.5"
+            ]
+          },
+          {
+            "quote": "travel carbon neutral",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET",
+              "GG-260.5"
+            ]
+          },
+          {
+            "quote": "offset the emissions of your flight",
+            "risk": "medium",
+            "rules": [
+              "GG-260.5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D11",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 233,
+          "cached_input": 5383,
+          "output": 904,
+          "cost_usd": 0.002001,
+          "seconds": 12.1,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 12.1,
+        "claims": [
+          {
+            "quote": "This shampoo is climate neutral: we compensate all of its CO2 emissions through certified forest projects.",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET",
+              "GG-260.5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D12",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 285,
+          "cached_input": 5281,
+          "output": 693,
+          "cost_usd": 0.001589,
+          "seconds": 9.39,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 9.39,
+        "claims": [
+          {
+            "quote": "made with 50% ocean plastic.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D13",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 316,
+          "cached_input": 5283,
+          "output": 918,
+          "cost_usd": 0.002047,
+          "seconds": 11.41,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 11.41,
+        "claims": [
+          {
+            "quote": "sustainable fashion that is better for the planet",
+            "risk": "high",
+            "rules": [
+              "EU-GENERIC",
+              "GG-260.4",
+              "GG-260.3d"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D14",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 316,
+          "cached_input": 5388,
+          "output": 969,
+          "cost_usd": 0.002152,
+          "seconds": 13.92,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 13.91,
+        "claims": [
+          {
+            "quote": "Eco-friendly dish soap",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          },
+          {
+            "quote": "Earth-safe and green",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C01",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 292,
+          "cached_input": 5283,
+          "output": 791,
+          "cost_usd": 0.001787,
+          "seconds": 9.57,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 9.57,
+        "claims": [
+          {
+            "quote": "made from 70% recycled paper fiber by weight.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C02",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 6,
+          "cached_input": 3704,
+          "output": 356,
+          "cost_usd": 0.000806,
+          "seconds": 4.91,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 4.91,
+        "claims": [
+          {
+            "quote": "recyclable in the few communities that collect #5 plastics.",
+            "risk": "low",
+            "rules": [
+              "GG-260.12",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C03",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 592,
+          "cached_input": 5306,
+          "output": 1604,
+          "cost_usd": 0.003489,
+          "seconds": 15.56,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 15.56,
+        "claims": [
+          {
+            "quote": "compostable in industrial composting facilities, which may not exist in your area",
+            "risk": "medium",
+            "rules": [
+              "GG-260.7",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Certified to ASTM D6400 by BPI.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Not suitable for home composting.",
+            "risk": "low",
+            "rules": [
+              "GG-260.7"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C04",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 305,
+          "cached_input": 5287,
+          "output": 732,
+          "cost_usd": 0.001672,
+          "seconds": 10.88,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 10.88,
+        "claims": [
+          {
+            "quote": "20% less plastic than our previous 32 oz bottle.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.3d",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C05",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 378,
+          "cached_input": 5433,
+          "output": 1366,
+          "cost_usd": 0.002962,
+          "seconds": 15.53,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 15.52,
+        "claims": [
+          {
+            "quote": "Made with 100% organic cotton",
+            "risk": "medium",
+            "rules": [
+              "GG-260.16",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "certified by the Global Organic Textile Standard (GOTS)",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C06",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 6,
+          "cached_input": 3696,
+          "output": 466,
+          "cost_usd": 0.001026,
+          "seconds": 6.42,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 6.43,
+        "claims": [
+          {
+            "quote": "Our factory runs on 60% solar power generated on site; the rest comes from the regional grid.",
+            "risk": "low",
+            "rules": [
+              "GG-260.15",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C07",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 6,
+          "cached_input": 3694,
+          "output": 390,
+          "cost_usd": 0.000874,
+          "seconds": 5.94,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 5.94,
+        "claims": [
+          {
+            "quote": "return the empty glass bottle to any of our stores and we refill it for free.",
+            "risk": "low",
+            "rules": [
+              "GG-260.14"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C08",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 6,
+          "cached_input": 3738,
+          "output": 727,
+          "cost_usd": 0.001549,
+          "seconds": 7.64,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 7.64,
+        "claims": [
+          {
+            "quote": "cardboard box contains 85% recycled fibre",
+            "risk": "low",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "certified by FSC Recycled (licence FSC-C000000)",
+            "risk": "low",
+            "rules": [
+              "GG-260.6",
+              "EU-LABEL"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "D01",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 412,
+          "cached_input": 5411,
+          "output": 1563,
+          "cost_usd": 0.003364,
+          "seconds": 15.86,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 15.86,
+        "claims": [
+          {
+            "quote": "an eco-friendly, renewable fiber",
+            "risk": "high",
+            "rules": [
+              "GG-260.4",
+              "GG-260.16",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Made from 100% bamboo",
+            "risk": "medium",
+            "rules": [
+              "FTC-TEX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D02",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 160,
+          "cached_input": 5804,
+          "output": 2611,
+          "cost_usd": 0.005407,
+          "seconds": 38.02,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 38.02,
+        "claims": [
+          {
+            "quote": "is naturally antibacterial",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "bamboo grown without pesticides",
+            "risk": "high",
+            "rules": [
+              "FTC-TEX",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Our bamboo baby blanket",
+            "risk": "medium",
+            "rules": [
+              "FTC-TEX"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D03",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 246,
+          "cached_input": 5387,
+          "output": 845,
+          "cost_usd": 0.001886,
+          "seconds": 11.95,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 11.96,
+        "claims": [
+          {
+            "quote": "Our plastic bags are 100% biodegradable. Just toss them in the trash and they break down.",
+            "risk": "high",
+            "rules": [
+              "GG-260.8",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D04",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 324,
+          "cached_input": 5393,
+          "output": 1138,
+          "cost_usd": 0.002492,
+          "seconds": 14.98,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.99,
+        "claims": [
+          {
+            "quote": "better for the environment",
+            "risk": "high",
+            "rules": [
+              "GG-260.3d"
+            ]
+          },
+          {
+            "quote": "Disposable paper plates: biodegradable",
+            "risk": "medium",
+            "rules": [
+              "GG-260.8",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D05",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 504,
+          "cached_input": 5289,
+          "output": 1934,
+          "cost_usd": 0.004126,
+          "seconds": 20.77,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 20.78,
+        "claims": [
+          {
+            "quote": "biodegradable and septic safe",
+            "risk": "high",
+            "rules": [
+              "GG-260.8",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "feel good about every use",
+            "risk": "medium",
+            "rules": [
+              "GG-260.2",
+              "GG-260.4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D06",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 505,
+          "cached_input": 5290,
+          "output": 1218,
+          "cost_usd": 0.002694,
+          "seconds": 13.39,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 13.4,
+        "claims": [
+          {
+            "quote": "then recycle it!",
+            "risk": "medium",
+            "rules": [
+              "GG-260.12",
+              "GG-260.3b"
+            ]
+          },
+          {
+            "quote": "Our pods are recyclable.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.12"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D07",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 362,
+          "cached_input": 5400,
+          "output": 1035,
+          "cost_usd": 0.002295,
+          "seconds": 11.84,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 11.84,
+        "claims": [
+          {
+            "quote": "Zero VOC interior paint",
+            "risk": "medium",
+            "rules": [
+              "GG-260.9",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Safe for your family and the planet",
+            "risk": "medium",
+            "rules": [
+              "GG-260.10",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D08",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 9,
+          "cached_input": 5621,
+          "output": 900,
+          "cost_usd": 0.001943,
+          "seconds": 15.85,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 15.85,
+        "claims": [
+          {
+            "quote": "Green Promise seal on our paints, our mark of environmental responsibility",
+            "risk": "high",
+            "rules": [
+              "GG-260.4",
+              "GG-260.6"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D09",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 3,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 524,
+          "cached_input": 5442,
+          "output": 1404,
+          "cost_usd": 0.003075,
+          "seconds": 14.76,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.76,
+        "claims": [
+          {
+            "quote": "Green Safety Shield seal",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6"
+            ]
+          },
+          {
+            "quote": "are certified organic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "organic and non-toxic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.10",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D10",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 371,
+          "cached_input": 5401,
+          "output": 1667,
+          "cost_usd": 0.003562,
+          "seconds": 18.02,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 18.02,
+        "claims": [
+          {
+            "quote": "travel carbon neutral",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET",
+              "GG-260.5"
+            ]
+          },
+          {
+            "quote": "offset the emissions of your flight",
+            "risk": "medium",
+            "rules": [
+              "GG-260.5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D11",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 492,
+          "cached_input": 5289,
+          "output": 1483,
+          "cost_usd": 0.003221,
+          "seconds": 13.77,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 13.77,
+        "claims": [
+          {
+            "quote": "This shampoo is climate neutral",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET"
+            ]
+          },
+          {
+            "quote": "we compensate all of its CO2 emissions through certified forest projects",
+            "risk": "high",
+            "rules": [
+              "EU-OFFSET",
+              "GG-260.5"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D12",
+        "label": "deceptive",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 218,
+          "cached_input": 5358,
+          "output": 733,
+          "cost_usd": 0.001654,
+          "seconds": 9.2,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 9.2,
+        "claims": [
+          {
+            "quote": "made with 50% ocean plastic",
+            "risk": "medium",
+            "rules": [
+              "GG-260.2",
+              "GG-260.13"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D13",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 462,
+          "cached_input": 5283,
+          "output": 1190,
+          "cost_usd": 0.002628,
+          "seconds": 16.25,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 16.25,
+        "claims": [
+          {
+            "quote": "sustainable fashion",
+            "risk": "high",
+            "rules": [
+              "EU-GENERIC",
+              "GG-260.4"
+            ]
+          },
+          {
+            "quote": "better for the planet",
+            "risk": "high",
+            "rules": [
+              "GG-260.3d",
+              "GG-260.2",
+              "EU-GENERIC"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "D14",
+        "label": "deceptive",
+        "top_risk": "high",
+        "flagged_high": true,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 331,
+          "cached_input": 5388,
+          "output": 1150,
+          "cost_usd": 0.002517,
+          "seconds": 14.12,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 14.12,
+        "claims": [
+          {
+            "quote": "Eco-friendly dish soap",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          },
+          {
+            "quote": "Earth-safe and green",
+            "risk": "high",
+            "rules": [
+              "GG-260.4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C01",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 207,
+          "cached_input": 5367,
+          "output": 622,
+          "cost_usd": 0.00143,
+          "seconds": 8.7,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 8.7,
+        "claims": [
+          {
+            "quote": "Shipping box made from 70% recycled paper fiber by weight.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C02",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 6,
+          "cached_input": 3704,
+          "output": 343,
+          "cost_usd": 0.00078,
+          "seconds": 5.79,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 5.8,
+        "claims": [
+          {
+            "quote": "recyclable in the few communities that collect #5 plastics",
+            "risk": "low",
+            "rules": [
+              "GG-260.12"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C03",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 574,
+          "cached_input": 5306,
+          "output": 1371,
+          "cost_usd": 0.003018,
+          "seconds": 13.66,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 13.65,
+        "claims": [
+          {
+            "quote": "This bag is compostable in industrial composting facilities, which may not exist in your area.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.7",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "Certified to ASTM D6400 by BPI.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C04",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 193,
+          "cached_input": 5373,
+          "output": 553,
+          "cost_usd": 0.001289,
+          "seconds": 7.81,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 7.82,
+        "claims": [
+          {
+            "quote": "20% less plastic than our previous 32 oz bottle.",
+            "risk": "medium",
+            "rules": [
+              "GG-260.3d",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C05",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 401,
+          "cached_input": 5433,
+          "output": 1621,
+          "cost_usd": 0.003478,
+          "seconds": 17.3,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 17.3,
+        "claims": [
+          {
+            "quote": "Made with 100% organic cotton",
+            "risk": "medium",
+            "rules": [
+              "GG-260.16",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "certified by the Global Organic Textile Standard (GOTS)",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C06",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 6,
+          "cached_input": 3696,
+          "output": 447,
+          "cost_usd": 0.000988,
+          "seconds": 6.21,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 6.21,
+        "claims": [
+          {
+            "quote": "Our factory runs on 60% solar power generated on site; the rest comes from the regional grid.",
+            "risk": "low",
+            "rules": [
+              "GG-260.15",
+              "GG-260.2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C07",
+        "label": "compliant",
+        "top_risk": "low",
+        "flagged_high": false,
+        "flagged_any": false,
+        "n_claims": 1,
+        "stopped": "",
+        "usage": {
+          "calls": 2,
+          "input": 108,
+          "cached_input": 3598,
+          "output": 525,
+          "cost_usd": 0.001167,
+          "seconds": 6.35,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 6.36,
+        "claims": [
+          {
+            "quote": "Refill pouches available: return the empty glass bottle to any of our stores and we refill it for free.",
+            "risk": "low",
+            "rules": [
+              "GG-260.14"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "C08",
+        "label": "compliant",
+        "top_risk": "medium",
+        "flagged_high": false,
+        "flagged_any": true,
+        "n_claims": 2,
+        "stopped": "",
+        "usage": {
+          "calls": 3,
+          "input": 413,
+          "cached_input": 5434,
+          "output": 1930,
+          "cost_usd": 0.004099,
+          "seconds": 20.51,
+          "replayed_calls": 0
+        },
+        "wall_seconds": 20.51,
+        "claims": [
+          {
+            "quote": "cardboard box contains 85% recycled fibre",
+            "risk": "medium",
+            "rules": [
+              "GG-260.13",
+              "GG-260.2"
+            ]
+          },
+          {
+            "quote": "certified by FSC Recycled (licence FSC-C000000).",
+            "risk": "medium",
+            "rules": [
+              "GG-260.6",
+              "EU-LABEL"
+            ]
+          }
+        ]
+      }
+    ]
+  ]
+}
