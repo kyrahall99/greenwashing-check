@@ -136,6 +136,10 @@ def prepare_input(text: str = "", url: str = "", html: str = "", defenses: bool 
     text = text.strip()
     if not text:
         raise ValueError("Paste some marketing text or enter a product page URL.")
+    truncated = False
+    if html and len(text) > MAX_INPUT_CHARS:
+        # Webpages: review the first part instead of refusing (product copy comes first).
+        text, truncated = text[:MAX_INPUT_CHARS], True
     if len(text) > MAX_INPUT_CHARS:
         raise BudgetExceeded(
             f"Input is {len(text):,} characters; the limit is {MAX_INPUT_CHARS:,}. "
@@ -145,7 +149,8 @@ def prepare_input(text: str = "", url: str = "", html: str = "", defenses: bool 
     clean = text
     if defenses:
         clean, redacted = safety.redact_injections(text)
-    return {"original": text, "clean": clean, "hidden_removed": hidden, "injections_removed": redacted}
+    return {"original": text, "clean": clean, "hidden_removed": hidden, "injections_removed": redacted,
+            "truncated": truncated}
 
 
 def run_review(
@@ -286,6 +291,7 @@ def _finish(prep, ext, claims, flags, manipulation, summary, llm, started, marke
             "injections_removed": prep["injections_removed"],
             "manipulation_noticed": manipulation,
             "validation_flags": flags,
+            "truncated": prep.get("truncated", False),
         },
         "usage": llm.usage.summary(),
         "wall_seconds": round(time.time() - started, 2),

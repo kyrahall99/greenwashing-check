@@ -57,8 +57,25 @@ def html_to_text(html: str, strip_hidden: bool = True) -> tuple[str, list[str]]:
                 if text:
                     hidden.append(text)
                 tag.decompose()
-    text = soup.get_text("\n", strip=True)
-    return re.sub(r"\n{3,}", "\n\n", text), hidden
+    # If the page marks its main content, review only that part.
+    main = soup.find("main") or soup.find(attrs={"role": "main"})
+    if main is not None and len(main.get_text(strip=True)) > 200:
+        soup = main
+    # Site chrome (menus, headers, footers, forms) is not product marketing.
+    for tag in soup.find_all(["nav", "header", "footer", "form", "aside", "dialog"]):
+        if not tag.decomposed:
+            tag.decompose()
+    for tag in soup.find_all(attrs={"role": ["navigation", "banner", "contentinfo", "dialog", "search"]}):
+        if not tag.decomposed:
+            tag.decompose()
+    # Drop repeated lines (menus and product grids repeat the same labels).
+    seen, lines = set(), []
+    for line in soup.get_text("\n", strip=True).split("\n"):
+        key = line.strip().lower()
+        if key and key not in seen:
+            seen.add(key)
+            lines.append(line.strip())
+    return "\n".join(lines), hidden
 
 
 def redact_injections(text: str) -> tuple[str, list[str]]:

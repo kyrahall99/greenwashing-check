@@ -187,6 +187,8 @@ def report_markdown(r: dict) -> str:
 st.divider()
 if report["stopped"]:
     st.error(f"**Review stopped.** {report['stopped']}")
+if report["safety"].get("truncated"):
+    st.info(f"This page was long, so only the first {MAX_INPUT_CHARS:,} characters of its text were reviewed.")
 if report["product_summary"]:
     st.markdown(f"<span class='muted'>Reviewed: {_e(report['product_summary'])}</span>", unsafe_allow_html=True)
 
