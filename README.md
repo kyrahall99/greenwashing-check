@@ -110,7 +110,7 @@ from the Green Guides' own examples. Run all of them in parallel:
 
 Add `--repeats 3` to measure run-to-run stability and `--no-skeptic` to measure
 what the Skeptic adds. Results are saved to `eval/results_*.json`. One pass costs
-about $0.07. A summary of all measured results is in `docs/research.md`.
+about $0.02. A summary of all measured results is in `docs/research.md`.
 
 ## Repo layout
 

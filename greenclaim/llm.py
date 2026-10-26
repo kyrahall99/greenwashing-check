@@ -21,9 +21,9 @@ for _env in (REPO_ROOT / ".env", REPO_ROOT.parent / ".env"):
 MODEL = "gpt-6-luna"
 PORTKEY_BASE_URL = "https://api.portkey.ai/v1"
 
-# Prices in USD per 1M tokens. ASSUMED placeholders: confirm against the course
-# rate card before quoting costs in the report. Change them here only.
-PRICE_PER_M = {"input": 0.25, "cached_input": 0.025, "output": 2.00}
+# Prices in USD per 1M tokens, standard tier (prompts up to 272K tokens), from
+# https://developers.openai.com/api/docs/pricing (checked 2026-10-26).
+PRICE_PER_M = {"input": 0.10, "cached_input": 0.01, "output": 0.50}
 
 # Spend limits (overspending defense).
 MAX_INPUT_CHARS = 20_000      # longer documents are refused before any model call

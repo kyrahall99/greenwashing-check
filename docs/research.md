@@ -42,7 +42,7 @@ Clio lawyer rates: https://clio.com/resources/legal-trends/compare-lawyer-rates/
 | Compliant wrongly rated high | 0 / 8 | 0 / 8 |
 | Accuracy of the high-risk flag | 84.9% | 81.8% |
 | Same top rating in all 3 runs | 17 / 22 | 21 / 22 |
-| Avg cost per review | USD 0.0034 | USD 0.0025 |
+| Avg cost per review | USD 0.00090 | USD 0.00067 |
 | Avg time per review | 17.7 s | 13.5 s |
 
 Files: `eval/results_skeptic_x3.json`, `eval/results_no_skeptic_x3.json`.
@@ -52,31 +52,34 @@ Unstable cases with the Skeptic: D02, D07, D09, C01, C06.
 
 | Input type | Calls | New input | Cached input | Output | Cost | Time |
 |---|---|---|---|---|---|---|
-| Short claim (eval average) | 3.9 | 802 | 6,812 | 1,499 | USD 0.0034 | 18 s |
-| Full product page (6 runs, `eval/page_runs.json`) | 4 | 3,339 | 7,089 | 6,144 | USD 0.0133 | 53 s |
+| Short claim (eval average) | 3.9 | 802 | 6,812 | 1,499 | USD 0.00090 | 18 s |
+| Full product page (6 runs, `eval/page_runs.json`) | 4 | 3,339 | 7,089 | 6,144 | USD 0.0035 | 53 s |
 
-- Output tokens are about 92% of the cost of a full-page review.
-- Without prompt caching the same page review would cost USD 0.0149, so caching
-  saves about 11%; for short claims it saves about 31% (USD 0.0049 to 0.0034).
-- Prices used: USD 0.25 / 0.025 / 2.00 per 1M input / cached / output tokens
-  **(placeholder until course rates are confirmed)**.
+- Output tokens are about 88% of the cost of a full-page review.
+- Without prompt caching the same page review would cost USD 0.0041, so caching
+  saves about 16%; for short claims it saves about 41% (USD 0.0015 to 0.0009).
+- Prices: gpt-6-luna standard tier, USD 0.10 / 0.01 / 0.50 per 1M input / cached /
+  output tokens (https://developers.openai.com/api/docs/pricing, checked 2026-10-26).
+- Costs are computed from the measured token counts at these prices. The
+  `cost_usd` fields inside older JSON result files used earlier placeholder
+  prices; the token counts in them are unchanged and correct.
 
 ## 4. Scale
 
 Assume a seller checks **20 product pages a month (assumption)** at the measured
-full-page cost of USD 0.0133.
+full-page cost of USD 0.0035.
 
 | Users | Reviews / month | Cost / month |
 |---|---|---|
-| 1 | 20 | USD 0.27 |
-| 100 | 2,000 | USD 26.60 |
-| 10,000 | 200,000 | USD 2,660 |
+| 1 | 20 | USD 0.07 |
+| 100 | 2,000 | USD 6.95 |
+| 10,000 | 200,000 | USD 695 |
 
 - **Marketplace screen:** Etsy had about 5.6 million active sellers in 2025
   (Inside Retail, reporting Etsy's results: https://insideretail.us/etsy-vows-sustained-growth-after-revenue-lift/).
-  Reviewing one product page per seller would cost about USD 74,500.
+  Reviewing one product page per seller would cost about USD 19,500.
 - **vs. a lawyer:** at the U.S. average of USD 349/hour, one hour of review for one
-  product page **(assumption)** costs about 26,000 times the agent's USD 0.0133.
+  product page **(assumption)** costs about 100,000 times the agent's USD 0.0035.
 
 ## 5. Cost-cutting steps and trade-offs
 
@@ -84,9 +87,9 @@ full-page cost of USD 0.0133.
    served from cache at a tenth of the price.
 2. **Turned off Portkey's whole-response cache** (done): costs a little more on
    exact repeats, but keeps every logged token count real.
-3. **Quick mode without the Skeptic** (measured): 26% cheaper and 24% faster, and
+3. **Quick mode without the Skeptic** (measured): 26% cheaper (USD 0.00067 vs 0.00090) and 24% faster, and
    ratings are more stable, but it rates 0.7 fewer deceptive claims high per 14.
 4. **Rewriter runs only for risky claims** (done): no rewrite call when all claims
    look OK.
-5. **Next:** output is 92% of cost, so shorter agent outputs (terser reasons,
+5. **Next:** output is 88% of cost, so shorter agent outputs (terser reasons,
    capped rewrites) are the biggest remaining saving.
