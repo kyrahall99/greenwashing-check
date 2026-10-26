@@ -174,8 +174,10 @@ def report_markdown(r: dict) -> str:
                 lines.append(f"- {name}: {c[key]}")
         lines.append("")
     s = r["safety"]
-    removed = len(s["hidden_text_removed"]) + len(s["injections_removed"])
-    lines += ["## Safety", "", f"- Text aimed at the AI that was removed: {removed} block(s)",
+    lines += ["## Safety", "",
+              f"- Hidden webpage text removed before review (menus, pop-ups, invisible text): "
+              f"{len(s['hidden_text_removed'])} block(s)",
+              f"- Sentences addressed to the AI that were removed: {len(s['injections_removed'])}",
               f"- Output checks: {len(s['validation_flags'])} issue(s) corrected", "",
               "This tool flags risk. It is not legal advice.", ""]
     return "\n".join(lines)
@@ -231,7 +233,9 @@ with tab_safety:
     any_issue = False
     if s["hidden_text_removed"]:
         any_issue = True
-        st.warning(f"Removed {len(s['hidden_text_removed'])} hidden text block(s) from the webpage before the agents saw it:")
+        st.warning(f"Removed {len(s['hidden_text_removed'])} hidden text block(s) from the webpage before the agents "
+                   "saw it. On real store pages most of these are menus and pop-ups; hidden text is removed "
+                   "because it is a common place to plant instructions for AI.")
         for h in s["hidden_text_removed"]:
             st.markdown(f"> {h}")
     if s["injections_removed"]:
