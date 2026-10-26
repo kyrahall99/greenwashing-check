@@ -21,7 +21,7 @@ RISK_STYLE = {
     "low": ("#067647", "#ecfdf3", "Looks OK"),
 }
 
-st.set_page_config(page_title="GreenClaim Check", page_icon="🌿", layout="wide")
+st.set_page_config(page_title="Check your product for greenwashing", page_icon="🌿", layout="wide")
 st.markdown(
     """<style>
     .block-container {max-width: 1100px; padding-top: 2rem;}
@@ -68,7 +68,18 @@ with st.sidebar:
     st.caption("GreenClaim Check flags risk. It is not legal advice.")
 
 # ---------- Header ----------
-st.title("🌿 GreenClaim Check")
+st.title("🌿 Check your product for greenwashing")
+st.markdown(
+    "<div style='background:#ecfdf3;border-radius:10px;padding:14px 18px;margin-bottom:12px;color:#05603a'>"
+    "<b>Why this matters.</b> Greenwashing is when a product is made to sound better for the planet "
+    "than it really is, with words like “eco-friendly”, “biodegradable”, or “carbon neutral” that "
+    "have no proof behind them. It misleads shoppers who are trying to make good choices, rewards "
+    "companies for marketing instead of real improvements, and makes it harder for honest brands to "
+    "stand out. Knowing which claims are specific and backed by evidence helps you shop as an informed "
+    "consumer, and helps sellers make claims they can stand behind."
+    "</div>",
+    unsafe_allow_html=True,
+)
 st.markdown(
     "Paste your product description or link your product page. A team of AI agents finds every "
     "environmental claim, checks it against the **FTC Green Guides** and the **EU green claims rules**, "
