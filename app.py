@@ -65,7 +65,7 @@ with st.sidebar:
         f"Model: gpt-6-luna. Prices used for cost (per 1M tokens): input \\${PRICE_PER_M['input']}, "
         f"cached \\${PRICE_PER_M['cached_input']}, output \\${PRICE_PER_M['output']}."
     )
-    st.caption("GreenClaim Check flags risk. It is not legal advice.")
+    st.caption("This tool flags risk. It is not legal advice.")
 
 # ---------- Header ----------
 st.title("🌿 Check your product for greenwashing")
@@ -155,7 +155,7 @@ def report_markdown(r: dict) -> str:
     """Plain-text report a seller can save, share with a lawyer, or attach to a ticket."""
     label = {"high": "HIGH RISK", "medium": "NEEDS EVIDENCE", "low": "LOOKS OK"}
     lines = [
-        "# GreenClaim Check report", "",
+        "# Greenwashing check report", "",
         f"- Date: {r['timestamp']}", f"- Market: {r['market']}",
         f"- Product: {r['product_summary']}",
         f"- Results: {r['counts']['high']} high risk, {r['counts']['medium']} need evidence, "
@@ -177,7 +177,7 @@ def report_markdown(r: dict) -> str:
     removed = len(s["hidden_text_removed"]) + len(s["injections_removed"])
     lines += ["## Safety", "", f"- Text aimed at the AI that was removed: {removed} block(s)",
               f"- Output checks: {len(s['validation_flags'])} issue(s) corrected", "",
-              "GreenClaim Check flags risk. It is not legal advice.", ""]
+              "This tool flags risk. It is not legal advice.", ""]
     return "\n".join(lines)
 
 
@@ -195,7 +195,7 @@ c3.metric("Looks OK", report["counts"]["low"])
 c4.metric("Cost of this review", f"${report['usage']['cost_usd']:.4f}")
 if report["summary"]:
     st.info(report["summary"])
-st.download_button("Download report", report_markdown(report), file_name="greenclaim_report.md",
+st.download_button("Download report", report_markdown(report), file_name="greenwashing_check_report.md",
                    mime="text/markdown", icon=":material/download:")
 
 tab_claims, tab_safety, tab_cost = st.tabs(["Claims", "Safety checks", "Tokens and cost"])
