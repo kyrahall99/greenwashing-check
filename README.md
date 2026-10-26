@@ -1,16 +1,18 @@
-# 🌿 GreenClaim Check
+# 🌿 Check your product for greenwashing
 
-**Find risky environmental marketing claims before regulators or customers do.**
+**An AI agent team that checks environmental claims on products, for shoppers and the small businesses that sell to them.**
 
 Small businesses write "eco-friendly", "biodegradable", or "carbon neutral" on
 products without knowing these claims are regulated by the FTC Green Guides in
 the US and banned outright in many cases under the EU's new green claims rules
-(Directive 2024/825, in force from 27 September 2026). GreenClaim Check is a team
+(Directive 2024/825, in force from 27 September 2026). This app is a team
 of four AI agents that reads your product copy or product page, finds every
 environmental claim, rates its legal risk, cites the rule, lists the proof you
 need to keep, and suggests compliant wording.
 
-MGT 409 final project by Kyra Hall.
+MGT 409 final project by Kyra Hall (Yale SOM and Yale School of the Environment).
+
+Repo: https://github.com/kyrahall99/greenwashing-check
 
 ## How it works
 
@@ -44,8 +46,8 @@ You need **Python 3.10 or newer** (tested on 3.14).
 1. **Clone the repo**
 
    ```bash
-   git clone <this-repo-url> greenclaim-check
-   cd greenclaim-check
+   git clone https://github.com/kyrahall99/greenwashing-check.git
+   cd greenwashing-check
    ```
 
 2. **Add your API key.** Copy `.env.example` to `.env` and paste your key after
@@ -124,9 +126,11 @@ about $0.02. A summary of all measured results is in `docs/research.md`.
 | `samples/` | Sample inputs, including a page with planted AI instructions |
 | `eval/` | Labeled test set and evaluation script |
 | `docs/screenshots/` | Screenshots used in the report |
+| `docs/real_runs/` | Reviews of real product pages (Who Gives a Crap, Dr. Bronner's, Credo) |
+| `docs/research.md` | Measured results, competitors, and cost math |
 
 ## Notes
 
 - Cost figures use the prices set in `PRICE_PER_M` in `greenclaim/llm.py`.
-- GreenClaim Check flags risk. It is not legal advice.
+- This tool flags risk. It is not legal advice.
 - Never commit your `.env`; it is listed in `.gitignore`.
